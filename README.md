@@ -1,4 +1,4 @@
-### 🍒 Akira Bot 🍒
+### 🈯 RockLee Bot 🈯
 <p align="center">
 <img src="https://telegra.ph/file/4f5019e2f2074ae57ad2c.jpg" alt="GenesisBot-Pro" width="900"/>
 </p>
