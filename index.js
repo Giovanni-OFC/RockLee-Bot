@@ -29,7 +29,7 @@ say('Gaara Bot', {
   align: 'center',
   gradient: ['red', 'magenta']
 })
-say(`GaaraBot By: Florcita`, {
+say(`RockLee Bot By: Florcita`, {
   font: 'console',
   align: 'center',
   gradient: ['cyan', 'magenta']
