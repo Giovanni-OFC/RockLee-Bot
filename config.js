@@ -20,11 +20,11 @@ global.APIKeys = { // APIKey Here
 }
 
 // Sticker WM
-global.packname = 'GAARABOT' 
+global.packname = 'ROCKLEE BOT' 
 global.author = '@xs.akiraa' 
 
 //--info FG
-global.botName = 'GaaraBot'
+global.botName = 'RockLee Bot'
 global.fgig = 'https://instagram.com/xs.akiraa' 
 global.fgsc = 'https://github.com/AkiraaX2/GaaraBot' 
 global.fgyt = ''
