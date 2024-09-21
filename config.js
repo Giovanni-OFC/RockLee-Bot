@@ -26,7 +26,7 @@ global.author = '@xs.akiraa'
 //--info FG
 global.botName = 'RockLee Bot'
 global.fgig = 'https://instagram.com/xs.akiraa' 
-global.fgsc = 'https://github.com/AkiraaX2/GaaraBot' 
+global.fgsc = 'https://github.com/Giovanni-OFC/RockLee-Bot' 
 global.fgyt = ''
 global.fgpyp = ''
 global.fglog = '' 
