@@ -42,5 +42,5 @@
 
 
 ### 🔮 CREADOR 
-[![RockLee Bot](https://github.com/Giovanni-OFC/RockLee-Bot.png?size=100)](https://github.com/Giovanni-OFC/RockLee-Bot) 
+[![RockLee Bot](https://github.com/RockLee-Bot/Giovanni-OFC.png?size=100)](https://github.com/Giovanni-OFC/RockLee-Bot) 
 > Copyright (c) 2024 **[Giovanni-OFC](/blob/master/LICENSE)**.
