@@ -42,5 +42,5 @@
 
 
 ### 🔮 CREADOR 
-[![Akiraa Bot](https://github.com/AkiraaX2/YuliDesign.png?size=100)](https://github.com/AkiraaX2/YuliDesign) 
-> Copyright (c) 2024 **[Karim-off](https://github.com/AkiraaX2/YuliDesign/AkiraaBot/blob/master/LICENSE)**.
+[![RockLee Bot](https://github.com/RockLee-Bot/Giovanni-OFC.png?size=100)](https://github.com/RockLee-Bot/Giovanni-OFC) 
+> Copyright (c) 2024 **[Karim-off](/blob/master/LICENSE)**.
