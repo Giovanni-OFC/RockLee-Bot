@@ -4,7 +4,7 @@ let handler = async(m, { conn, usedPrefix, command }) => {
     let don = `
 
 » 𝘾𝙍𝙀𝘼𝘿𝙊𝙍 𝘿𝙀𝙇 𝘽𝙊𝙏
-wa.me/51902855352
+wa.me/56986511915
 
 » 𝙄𝙉𝙎𝙏𝘼𝙂𝙍𝘼𝙈
 https://www.instagram.com/max_xitado.pe
