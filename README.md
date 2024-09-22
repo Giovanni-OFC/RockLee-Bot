@@ -3,7 +3,7 @@
 <img src="https://f.uguu.se/WpdEwwjW.jpg" alt="GenesisBot-Pro" width="900"/>
 </p>
 
-#### Version De Akira: Beta
+#### Version De Rock Lee: Beta
 
 #### Creadora y Dueña: Florcita 🫅
 #### Proyecto Realizado: XB STAFF⚡
