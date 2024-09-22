@@ -24,7 +24,7 @@ let m2 = ` ─˖ ◜𝐇𝐨𝐥𝐚! 𝐒𝐨𝐲 𝐆𝐚𝐚𝐫𝐚𝐁𝐨�
 *│≼·˚* :𝘤
 *╰────────────*
 `
-    let pp = 'https://telegra.ph/file/5b1344b2c3e425c734e45.jpg' 
+    let pp = 'https://f.uguu.se/kEKtMEbU.jpg' 
 
 global.fcontact = {
         key: {
