@@ -510,8 +510,8 @@ export async function participantsUpdate({ id, participants, action }) {
             if (chat.welcome) {
                 let groupMetadata = await this.groupMetadata(id) || (conn.chats[id] || {}).metadata
                 for (let user of participants) {
-                    let pp = 'https://i.ibb.co/4ZRCsxT/Genesis.jpg'
-                    let ppgp = 'https://i.ibb.co/4ZRCsxT/Genesis.jpg'
+                    let pp = 'https://f.uguu.se/kEKtMEbU.jpg'
+                    let ppgp = 'https://f.uguu.se/kEKtMEbU.jpg'
                     try {
                         pp = await this.profilePictureUrl(user, 'image')
                         ppgp = await this.profilePictureUrl(id, 'image')
@@ -525,7 +525,7 @@ export async function participantsUpdate({ id, participants, action }) {
                                 groupicon: ppgp,
                                 membercount: groupMetadata.participants.length,
                                 profile: pp,
-                                background: 'https://f.uguu.se/qqVxroSV.jpg'
+                                background: 'https://f.uguu.se/kEKtMEbU.jpg'
                             }, 'apikey')
 
                             let lea = API('fgmods', '/api/goodbye2', {
@@ -550,7 +550,7 @@ export async function participantsUpdate({ id, participants, action }) {
         case 'promote':
             text = (chat.sPromote || this.spromote || conn.spromote || '@user ahora es administrador')
         case 'demote':
-            let pp = await this.profilePictureUrl(participants[0], 'image').catch(_ => 'https://f.uguu.se/qqVxroSV.jpg') 
+            let pp = await this.profilePictureUrl(participants[0], 'image').catch(_ => 'https://f.uguu.se/kEKtMEbU.jpg') 
             if (!text)
                 text = (chat.sDemote || this.sdemote || conn.sdemote || '@user ya no es administrador')
             text = text.replace('@user', '@' + participants[0].split('@')[0])
