@@ -1,52 +1,48 @@
-import fs from "fs"
-import fetch from "node-fetch"
-import FormData from "form-data"
+import fs from 'fs'
+import FormData from 'form-data'
+import axios from 'axios'
+import fetch from 'node-fetch'
 
-let handler = async m => {
-  try {
-    const q = m.quoted || m
-    const mime = q.mediaType || ""    
-    if (!/image|video|audio|sticker|document/.test(mime)) 
-      throw "¡No se proporcionan medios!"
-    const media = await q.download(true)
-    const fileSizeInBytes = fs.statSync(media).size    
-    if (fileSizeInBytes === 0) {
-      await m.reply("archivo vacio")
-      await fs.promises.unlink(media)
-      return
-    }   
-    if (fileSizeInBytes > 1073741824) {
-      await m.reply("El archivo es demasiado grande, el tamaño máximo es 1 GB")
-      await fs.promises.unlink(media)
-      return
-    }    
-    const { files } = await uploadUguu(media)
-    const caption = `*Link:*\n${files[0]?.url}`
-    await m.reply(caption)
-  } catch (e) {
-    await m.reply(`${e}`)
+let handler = async (m, { conn }) => {
+
+  let q = m.quoted ? m.quoted : m
+  let mime = (q.msg || q).mimetype || ''
+  
+  if (!mime.startsWith('image/')) {
+    return m.reply('🚩 Responde a una *Imagen.*')
+  }
+  await m.react('🕓')
+
+  let media = await q.download()
+  let formData = new FormData()
+  formData.append('image', media, { filename: 'file' })
+
+  let api = await axios.post('https://api.imgbb.com/1/upload?key=10604ee79e478b08aba6de5005e6c798', formData, {
+    headers: {
+      ...formData.getHeaders()
+    }
+  })
+
+  if (api.data.data) {
+    let txt = `*乂  I B B  -  U P L O A D E R*\n\n`
+        txt += `  *» Titulo* : ${q.filename || 'x'}\n`
+        txt += `  *» Id* : ${api.data.data.id}\n`
+        txt += `  *» Enlace* : ${api.data.data.url}\n`
+        txt += `  *» Directo* : ${api.data.data.url_viewer}\n`
+        txt += `  *» Mime* : ${mime}\n`
+        txt += `  *» File* : ${q.filename || 'x.jpg'}\n`
+        txt += `  *» Extension* : ${api.data.data.image.extension}\n`
+        txt += `  *» Delete* : ${api.data.data.delete_url}\n\n`
+        txt += `🚩 *${textbot}*`
+    await conn.sendFile(m.chat, api.data.data.url, 'ibb.jpg', txt, m, null, rcanal)
+    await m.react('✅')
+  } else {
+    await m.react('✖️')
   }
 }
-
-handler.help = ['tourl']
-handler.tags = ['convertir']
-handler.command = /^(tourl|upload)$/i
+handler.tags = ['tools']
+handler.help = ['ibb']
+handler.command = /^(ibb)$/i
+handler.register = true 
 export default handler
-
-async function uploadUguu(path) {
-  try {
-    const form = new FormData()
-    form.append("files[]", fs.createReadStream(path))   
-    const res = await fetch("https://uguu.se/upload.php", {
-      method: "POST",
-      headers: form.getHeaders(),
-      body: form
-    })    
-    const json = await res.json()
-    await fs.promises.unlink(path)   
-    return json
-  } catch (e) {
-    await fs.promises.unlink(path)
-    throw "Upload failed"
-  }
-}
+//xd
