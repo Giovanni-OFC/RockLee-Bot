@@ -1,6 +1,6 @@
 ### 🈯 RockLee Bot 🈯
 <p align="center">
-<img src="https://f.uguu.se/WpdEwwjW.jpg" alt="GenesisBot-Pro" width="900"/>
+<img src="https://f.uguu.se/WpdEwwjW.jpg" alt="RockLee-Pro" width="900"/>
 </p>
 
 #### Version De Rock Lee: Beta
